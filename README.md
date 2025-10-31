@@ -23,8 +23,6 @@ portfolio/
 |   `-- ...              # Các biểu tượng khác 
 `-- README.md            # Tài liệu dự án
 
-
-
 ---
 
 ## 🎨 styles.css – Chú thích chi tiết
@@ -167,6 +165,7 @@ Portfolio cá nhân – Thiết kế & phát triển giao diện web với phong
 
 📘 Bạn chỉ cần copy nội dung trên và lưu lại thành file `README.md` trong thư mục gốc của dự án.  
 Khi mở trên GitHub, ảnh **`portfolio.png`** sẽ tự động hiển thị làm preview.
+
 
 
 
