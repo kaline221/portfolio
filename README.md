@@ -10,18 +10,17 @@ Dự án sử dụng **HTML + CSS + JavaScript thuần**, tập trung vào hiệ
 
 ## 📁 Cấu trúc thư mục
 
-```text
 portfolio/
 |-- index.html           # File HTML chính (trang portfolio)
 |-- styles.css           # CSS định dạng & bố cục giao diện
 |-- script.js            # JS điều khiển hiệu ứng cuộn & navbar
-|-- portfolio.png        # Ảnh preview hiển thị trong README
+|-- README.md            # Tài liệu dự án
 |-- icon/                # Thư mục chứa biểu tượng
 |   |-- favicon.png      # Favicon trình duyệt
 |   |-- linkedin.svg     # Icon LinkedIn
 |   |-- github.svg       # Icon GitHub
-|   `-- ...              # Các biểu tượng khác 
-`-- README.md            # Tài liệu dự án
+|   `-- ...              # Các biểu tượng khác
+
 
 ---
 
@@ -165,6 +164,7 @@ Portfolio cá nhân – Thiết kế & phát triển giao diện web với phong
 
 📘 Bạn chỉ cần copy nội dung trên và lưu lại thành file `README.md` trong thư mục gốc của dự án.  
 Khi mở trên GitHub, ảnh **`portfolio.png`** sẽ tự động hiển thị làm preview.
+
 
 
 
