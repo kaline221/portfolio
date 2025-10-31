@@ -1,169 +1,500 @@
-/* =========================================================
-   🎨 BIẾN MÀU GỐC & CẤU HÌNH CHUNG
-========================================================= */
-:root {
-  --color-dark-green: #344128;
-  --color-grey-green: #959c8f;
-  --color-beige: #ecd4a1;
-  --color-orange: #fdad16;
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-dark-green-alt: #232c1b;
-}
-
-/* Cuộn trang mượt mà */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Định dạng chung cho toàn bộ trang */
-body {
-  margin: 0;
-  font-family: 'Actor', sans-serif;
-  background-color: var(--color-dark-green);
-  color: var(--color-white);
-  font-size: 16px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.page-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-  position: relative;
-}
-
-/* Liên kết, danh sách và tiêu đề mặc định */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-}
-
-/* =========================================================
-   📱 MEDIA QUERY – Responsive cho các kích thước màn hình
-========================================================= */
-@media (max-width: 1200px) {
-  .hero-container,
-  .about-container,
-  .skills-container {
-    padding-left: 40px;
-    padding-right: 40px;
+  :root {
+    --color-dark-green: #344128;
+    --color-grey-green: #959c8f;
+    --color-beige: #ecd4a1;
+    --color-orange: #fdad16;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-dark-green-alt: #232c1b;
   }
-}
 
-@media (max-width: 992px) {
-  .about-content,
-  .skills-container {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Actor', sans-serif;
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    font-size: 16px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .page-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+
+  @media (max-width: 1200px) {
+    .hero-container, .about-container, .skills-container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .about-content, .skills-container {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .hero-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-title {
+      position: static;
+      margin-top: 80px;
+    }
+    .hero-image-wrapper {
+      display: none;
+    }
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-header, .about-header {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .hero-title {
+      font-size: 60px;
+      margin-top: 40px;
+    }
+    .about-headline {
+      font-size: 50px;
+    }
+    .hobbies-grid {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .language-list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+    .hero-section {
+    position: relative;
+    height: 720px;
+    background-color: var(--color-dark-green);
+    overflow: hidden;
+  }
+  .hero-bg-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 394px;
+    background-color: var(--color-grey-green);
+    z-index: 1;
+  }
+  .hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 88px;
+    height: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 40px;
   }
-
+  .hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-text {
+    font-family: 'Autour One', sans-serif;
+    font-size: 24px;
+    color: var(--color-dark-green);
+  }
+  .main-nav ul {
+    display: flex;
+    gap: 30px;
+  }
+  .main-nav a {
+    font-family: 'Autour One', sans-serif;
+    font-size: 18px;
+    color: var(--color-dark-green);
+  }
   .hero-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-grow: 1;
+    position: relative;
   }
-
   .hero-title {
-    position: static;
-    margin-top: 80px;
+    font-family: 'Aboreto', sans-serif;
+    font-size: 90px;
+    line-height: 1.1;
+    color: var(--color-dark-green);
+    position: absolute;
+    top: 186px;
+    left: 58px;
+    margin: 0;
   }
-
   .hero-image-wrapper {
-    display: none;
+    position: absolute;
+    top: 55px;
+    left: 610px;
   }
-
-  .about-right {
+  .hero-image {
+    width: 425px;
+    height: 519px;
+    border-radius: 109px;
+    object-fit: cover;
+  }
+    .about-section {
+    background-color: var(--color-grey-green);
+    padding: 28px 0 80px;
+    color: var(--color-black);
+  }
+  .about-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 88px;
+  }
+  .about-header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
   }
-}
-
-@media (max-width: 768px) {
-  .hero-header,
-  .about-header {
-    flex-direction: column;
-    gap: 20px;
+  .logo-text-dark, .nav-link-dark {
+    font-family: 'Autour One', sans-serif;
+    color: var(--color-dark-green);
   }
-
-  .hero-title {
-    font-size: 60px;
+  .logo-text-dark { font-size: 24px; }
+  .nav-link-dark { font-size: 18px; }
+  .about-content {
+    display: flex;
     margin-top: 40px;
-  }
-
-  .about-headline {
-    font-size: 50px;
-  }
-
-  .hobbies-grid {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .language-list {
-    flex-direction: column;
+    gap: 40px;
     align-items: flex-start;
+  }
+  .about-left {
+    flex: 1;
+    padding-top: 40px;
+  }
+  .about-headline {
+    font-family: 'Autour One', sans-serif;
+    font-size: 75px;
+    line-height: 1.2;
+  }
+  .about-description {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 20px;
+    max-width: 488px;
+  }
+  .social-media {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .social-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    line-height: 47px;
+  }
+  .social-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  .about-right {
+    flex: 1;
+    position: relative;
+  }
+  .about-image-area {
+    position: relative;
+    height: 550px;
+  }
+  .image-stack {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 100%;
+    height: 100%;
+  }
+  .image-bg-shape {
+    position: absolute;
+    width: 473px;
+    height: 510px;
+    background-color: var(--color-dark-green);
+    top: 100px;
+    left: 71px;
+  }
+  .about-photo {
+    position: absolute;
+    width: 613px;
+    height: 460px;
+    transform: rotate(-3.71deg);
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  .tag {
+    position: absolute;
+    background-color: var(--color-beige);
+    border-radius: 36.5px;
+    padding: 8px 20px;
+    font-family: 'Actor', sans-serif;
+    font-size: 24px;
+    color: var(--color-dark-green-alt);
+    z-index: 5;
+  }
+  .dob-tag {
+    top: 150px;
+    left: 500px;
+  }
+  .nationality-tag {
+    bottom: 135px;
+    left: 37px;
+    z-index:999 ;
+  }
+  .contact-card {
+    background-color: var(--color-dark-green-alt);
+    color: var(--color-white);
+    padding: 25px 40px;
+    position: relative;
+    z-index: 10;
+    margin-top: -160px;
+    margin-left: 130px;
+    width: 473px;
+  }
+  .contact-title {
+    font-family: 'Autour One', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+    .skills-section {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    padding: 70px 0;
+  }
+  .skills-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 88px;
+    display: flex;
+    gap: 100px;
+  }
+  .skills-column {
+    flex: 1;
+  }
+  .section-title {
+    font-family: 'Autour One', sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .timeline {
+    position: relative;
+    padding-left: 50px;
+  }
+  .timeline-line {
+    position: absolute;
+    left: 17px;
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    border-left: 4px dotted var(--color-beige);
+  }
+  .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 45px;
+  }
+  .timeline-icon {
+    position: absolute;
+    left: -48px;
+    top: 5px;
+    width: 35px;
+  }
+  .timeline-content {
+    font-family: 'Actor', sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .hobbies-card {
+    background-color: var(--color-beige);
+    border-radius: 48px;
+    padding: 30px 45px;
+    margin-top: 60px;
+    color: var(--color-dark-green);
+  }
+  .hobbies-title {
+    font-family: 'Autour One', sans-serif;
+    font-size: 40px;
+  }
+  .hobbies-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .hobby-item {
+    text-align: center;
+    font-family: 'Actor', sans-serif;
+    font-size: 24px;
+  }
+  .hobby-item img {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .tech-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .tech-skill-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .tech-skill-item img {
+    width: 56px;
+    height: 52px;
+  }
+  .progress-bar {
+    flex-grow: 1;
+    height: 21px;
+    border: 1px solid var(--color-white);
+    padding: 3px;
+  }
+  .progress-fill {
+    height: 100%;
+    background-color: var(--color-orange);
+  }
+  .language-list {
+    display: flex;
+    gap: 80px;
+    margin-top: 20px;
+  }
+  .language-item {
+    display: flex;
+    align-items: center;
     gap: 20px;
   }
+  .language-name {
+    font-family: 'Actor', sans-serif;
+    font-size: 28px;
+  }
+  .language-level {
+    font-family: 'Actor', sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+    .scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background-color: rgba(217, 217, 217, 0.03);
+    backdrop-filter: blur(1px);
+    box-shadow: 10px 20px 20px 0px rgba(0, 0, 0, 0.25), inset 0px 2px 4px 0px rgba(255, 255, 255, 0.4), inset 0px -2px 4px 0px rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: transform 0.3s ease;
+  }
+  .scroll-to-top:hover {
+    transform: translateY(-5px);
+  }
+  /* Hiệu ứng phát sáng khi hover vào nút scroll-to-top */
+.scroll-to-top:hover {
+  box-shadow:
+    0 0 15px 4px rgba(255, 255, 255, 0.6),
+    0 0 30px 8px rgba(253, 173, 22, 0.8);
+  transform: translateY(-8px);
 }
 
-/* =========================================================
-   🦸‍♀️ HERO SECTION – Phần giới thiệu chính
-========================================================= */
-.hero-section {
-  position: relative;
-  height: 720px;
-  background-color: var(--color-dark-green);
-  overflow: hidden;
+/* Nav bar dạng liquid glass (nổi và mờ ảo) */
+.hero-header,
+.about-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 15px 40px;
+  z-index: 999;
+  transition: opacity 0.4s ease;
 }
 
-/* Dải nền phía trên hero */
-.hero-bg-top {
-  position: absolute;
+/* Giữ hero-header cố định trên đầu (fixed glass navbar) */
+.hero-header {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 394px;
-  background-color: var(--color-grey-green);
-  z-index: 1;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 16px 16px;
+  z-index: 1000;
+  padding: 15px 60px;
+  transition: opacity 0.5s ease;
 }
 
-/* Container chính của hero */
+/* Thêm khoảng trống để nội dung không bị che */
 .hero-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 100px 88px 28px; /* thêm top-padding để không bị che bởi navbar */
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  padding-top: 100px;
+}
+/* Ẩn about-header hoàn toàn */
+.about-header {
+  display: none !important;
 }
 
-/* =========================================================
-   🌫️ NAVBAR (Liquid Glass kiểu iOS)
-========================================================= */
+/* Liquid Glass Navbar (kiểu iOS 16–17) */
 .hero-header {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 80%; /* thu gọn lại, không full width */
   max-width: 900px;
   padding: 14px 40px;
   background: rgba(255, 255, 255, 0.15);
@@ -175,392 +506,49 @@ h1, h2, h3, h4, h5, h6, p {
     0 4px 30px rgba(0, 0, 0, 0.1),
     inset 0 1px 2px rgba(255, 255, 255, 0.2);
   z-index: 999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition:
+  transition: 
     transform 0.6s ease,
     opacity 0.6s ease,
     width 0.6s ease,
     padding 0.6s ease;
 }
 
-/* Khi navbar thu nhỏ (scroll xuống) */
+/* Khi navbar thu nhỏ */
 .hero-header.shrink {
   transform: translate(-50%, -80px) scale(0.95);
   opacity: 0;
 }
 
-/* Logo và text thương hiệu */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* Tạo khoảng trống để tránh nav che nội dung */
+.hero-container {
+  padding-top: 100px;
 }
 
-.logo-text {
-  font-family: 'Autour One', sans-serif;
-  font-size: 24px;
-  color: var(--color-dark-green);
-}
-
-/* Menu điều hướng chính */
-.main-nav ul {
-  display: flex;
-  gap: 30px;
-}
-
-.main-nav a {
-  font-family: 'Autour One', sans-serif;
-  font-size: 18px;
-  color: var(--color-dark-green);
-  transition: all 0.3s ease;
-}
-
-/* Hiệu ứng hover cho link trong navbar */
+/* Hover link nhẹ nhàng */
 .main-nav a:hover {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
   color: var(--color-beige);
+  transition: all 0.3s ease;
 }
 
-/* Ẩn about-header (vì hero-header đã thay thế) */
-.about-header {
-  display: none !important;
+/* Scroll-to-top hiệu ứng phát sáng */
+.scroll-to-top:hover {
+  box-shadow:
+    0 0 15px 5px rgba(255, 255, 255, 0.6),
+    0 0 25px 10px rgba(253, 173, 22, 0.7);
+  transform: translateY(-8px);
 }
 
-/* =========================================================
-   💫 HERO CONTENT – Nội dung chính của Hero
-========================================================= */
-.hero-main {
-  flex-grow: 1;
-  position: relative;
+#contact, #hero { 
+  scroll-margin-top: 120px; 
 }
-
-.hero-title {
-  font-family: 'Aboreto', sans-serif;
-  font-size: 90px;
-  line-height: 1.1;
-  color: var(--color-dark-green);
-  position: absolute;
-  top: 186px;
-  left: 58px;
-  margin: 0;
+#skills {
+  scroll-margin-top: -52px;
 }
-
-.hero-image-wrapper {
-  position: absolute;
-  top: 55px;
-  left: 610px;
+#about {
+  scroll-margin-top: 1px; 
 }
-
-.hero-image {
-  width: 425px;
-  height: 519px;
-  border-radius: 109px;
-  object-fit: cover;
-}
-
-/* =========================================================
-   👤 ABOUT SECTION – Giới thiệu bản thân
-========================================================= */
-.about-section {
-  background-color: var(--color-grey-green);
-  padding: 28px 0 80px;
-  color: var(--color-black);
-}
-
-.about-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 88px;
-}
-
-/* Nội dung chính gồm phần text và hình */
-.about-content {
-  display: flex;
-  margin-top: 40px;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.about-left {
-  flex: 1;
-  padding-top: 40px;
-}
-
-.about-headline {
-  font-family: 'Autour One', sans-serif;
-  font-size: 75px;
-  line-height: 1.2;
-}
-
-.about-description {
-  font-size: 20px;
-  line-height: 1.2;
-  margin-top: 20px;
-  max-width: 488px;
-}
-
-/* Liên kết mạng xã hội */
-.social-media {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-}
-
-.social-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 20px;
-  line-height: 47px;
-}
-
-.social-item img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-}
-
-/* Ảnh và bố cục phần bên phải */
-.about-right {
-  flex: 1;
-  position: relative;
-}
-
-.about-image-area {
-  position: relative;
-  height: 550px;
-}
-
-.image-stack {
-  position: absolute;
-  top: 0;
-  left: 60px;
-  width: 100%;
-  height: 100%;
-}
-
-.image-bg-shape {
-  position: absolute;
-  width: 473px;
-  height: 510px;
-  background-color: var(--color-dark-green);
-  top: 100px;
-  left: 71px;
-}
-
-.about-photo {
-  position: absolute;
-  width: 613px;
-  height: 460px;
-  transform: rotate(-3.71deg);
-  top: 0;
-  left: 0;
-  object-fit: cover;
-}
-
-/* Tag nhỏ hiển thị ngày sinh, quốc tịch, ... */
-.tag {
-  position: absolute;
-  background-color: var(--color-beige);
-  border-radius: 36.5px;
-  padding: 8px 20px;
-  font-family: 'Actor', sans-serif;
-  font-size: 24px;
-  color: var(--color-dark-green-alt);
-  z-index: 5;
-}
-
-.dob-tag {
-  top: 150px;
-  left: 500px;
-}
-
-.nationality-tag {
-  bottom: 135px;
-  left: 37px;
-  z-index: 999;
-}
-
-/* Card liên hệ */
-.contact-card {
-  background-color: var(--color-dark-green-alt);
-  color: var(--color-white);
-  padding: 25px 40px;
-  position: relative;
-  z-index: 10;
-  margin-top: -160px;
-  margin-left: 130px;
-  width: 473px;
-}
-
-.contact-title {
-  font-family: 'Autour One', sans-serif;
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.contact-list li {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/* =========================================================
-   💻 SKILLS SECTION – Kỹ năng, học vấn, ngôn ngữ
-========================================================= */
-.skills-section {
-  background-color: var(--color-dark-green);
-  color: var(--color-white);
-  padding: 70px 0;
-}
-
-.skills-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 88px;
-  display: flex;
-  gap: 100px;
-}
-
-.skills-column {
-  flex: 1;
-}
-
-.section-title {
-  font-family: 'Autour One', sans-serif;
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-
-/* Timeline – học vấn / kinh nghiệm */
-.timeline {
-  position: relative;
-  padding-left: 50px;
-}
-
-.timeline-line {
-  position: absolute;
-  left: 17px;
-  top: 10px;
-  bottom: 10px;
-  width: 4px;
-  border-left: 4px dotted var(--color-beige);
-}
-
-.timeline-item {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  margin-bottom: 45px;
-}
-
-.timeline-icon {
-  position: absolute;
-  left: -48px;
-  top: 5px;
-  width: 35px;
-}
-
-.timeline-content {
-  font-family: 'Actor', sans-serif;
-  font-size: 24px;
-  line-height: 1.2;
-}
-
-/* Hobbies – Sở thích cá nhân */
-.hobbies-card {
-  background-color: var(--color-beige);
-  border-radius: 48px;
-  padding: 30px 45px;
-  margin-top: 60px;
-  color: var(--color-dark-green);
-}
-
-.hobbies-title {
-  font-family: 'Autour One', sans-serif;
-  font-size: 40px;
-}
-
-.hobbies-grid {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.hobby-item {
-  text-align: center;
-  font-family: 'Actor', sans-serif;
-  font-size: 24px;
-}
-
-.hobby-item img {
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-/* Tech Skills – kỹ năng công nghệ */
-.tech-skills-list {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.tech-skill-item {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.tech-skill-item img {
-  width: 56px;
-  height: 52px;
-}
-
-.progress-bar {
-  flex-grow: 1;
-  height: 21px;
-  border: 1px solid var(--color-white);
-  padding: 3px;
-}
-
-.progress-fill {
-  height: 100%;
-  background-color: var(--color-orange);
-}
-
-/* Ngôn ngữ */
-.language-list {
-  display: flex;
-  gap: 80px;
-  margin-top: 20px;
-}
-
-.language-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.language-name {
-  font-family: 'Actor', sans-serif;
-  font-size: 28px;
-}
-
-.language-level {
-  font-family: 'Actor', sans-serif;
-  font-size: 20px;
-  margin-top: 5px;
-}
-
-/* =========================================================
-   ⬆️ NÚT CUỘN LÊN ĐẦU TRANG (Scroll-to-Top)
-========================================================= */
+/* Tooltip cho nút scroll-to-top */
 .scroll-to-top {
   position: fixed;
   bottom: 40px;
@@ -578,7 +566,7 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
 }
 
-/* Hiệu ứng hover phát sáng */
+/* Hiệu ứng phát sáng khi hover */
 .scroll-to-top:hover {
   transform: translateY(-6px);
   box-shadow:
@@ -593,6 +581,7 @@ h1, h2, h3, h4, h5, h6, p {
   bottom: 70px;
   right: 50%;
   transform: translateX(50%);
+  /* background: #232C1B; */
   color: rgb(255, 255, 255);
   font-size: 14px;
   padding: 6px 10px;
@@ -607,20 +596,4 @@ h1, h2, h3, h4, h5, h6, p {
 .scroll-to-top:hover::after {
   opacity: 1;
   transform: translateX(50%) translateY(-5px);
-}
-
-/* =========================================================
-   ⚙️ CĂN LỀ KHI CUỘN ĐẾN SECTION
-========================================================= */
-#contact,
-#hero {
-  scroll-margin-top: 120px;
-}
-
-#skills {
-  scroll-margin-top: -52px;
-}
-
-#about {
-  scroll-margin-top: 1px;
 }
