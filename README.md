@@ -154,15 +154,13 @@ Cuộn trang để trải nghiệm hiệu ứng navbar và nút quay lại đầ
 
 ## 🖋️ Tác giả
 
-Kaline221
+Lê Hà Khánh Linh
 
 Portfolio cá nhân – Thiết kế & phát triển giao diện web với phong cách tối giản hiện đại.
 
 
 ---
 
-📘 Bạn chỉ cần copy nội dung trên và lưu lại thành file `README.md` trong thư mục gốc của dự án.  
-Khi mở trên GitHub, ảnh **`portfolio.png`** sẽ tự động hiển thị làm preview.
 
 
 
