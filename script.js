@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const documentHeight = document.body.scrollHeight;
     const aboutBottom = aboutSection.offsetTop + aboutSection.offsetHeight;
 
-    // Hiện nút scroll-to-top khi cuối trang
+    // Hiện nút quay về trang đầu tiên khi đến cuối trang
     scrollBtn.style.display =
       scrollTop + windowHeight >= documentHeight - 100 ? "flex" : "none";
 
-    // Thu gọn navbar khi gần hết tab 2
+    // Thu gọn navbar khi cuộn gần hết tab 2
     navBar.classList.toggle("shrink", scrollTop + windowHeight / 1.3 >= aboutBottom);
   });
 
-  // Click scroll-to-top
+  // Nút quay về trang đầu
   scrollBtn.addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
